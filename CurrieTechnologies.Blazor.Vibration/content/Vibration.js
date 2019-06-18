@@ -1,13 +1,7 @@
-﻿declare var DotNet: any;
-
-interface Window {
-  CurrieTechnologies: any;
-}
-
+"use strict";
 window.CurrieTechnologies = window.CurrieTechnologies || {};
 window.CurrieTechnologies.Blazor = window.CurrieTechnologies.Blazor || {};
 window.CurrieTechnologies.Blazor.Vibration = window.CurrieTechnologies.Blazor.Vibration || {};
-
-window.CurrieTechnologies.Blazor.Vibration.Vibrate = (pattern: number | number[]): boolean => {
-  return window.navigator.vibrate(pattern);
+window.CurrieTechnologies.Blazor.Vibration.Vibrate = function (pattern) {
+    return window.navigator.vibrate(pattern);
 };
