@@ -7,5 +7,6 @@ namespace CurrieTechnologies.Blazor.Vibration
     {
         Task<bool> VibrateAsync(int duration);
         Task<bool> VibrateAsync(IEnumerable<int> pattern);
+        Task<bool> BrowserSupportsVibrationAsync();
     }
 }

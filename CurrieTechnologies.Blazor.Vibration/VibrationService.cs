@@ -9,6 +9,7 @@ namespace CurrieTechnologies.Blazor.Vibration
         private readonly IJSRuntime jSRuntime;
         private readonly IJSInProcessRuntime jSInProcessRuntime;
         private const string vibrateFunction = "window.CurrieTechnologies.Blazor.Vibration.Vibrate";
+        private const string supportFunction = "window.CurrieTechnologies.Blazor.Vibration.VibrationSupported";
         public VibrationService(IJSRuntime jSRuntime)
         {
             this.jSRuntime = jSRuntime;
@@ -93,6 +94,16 @@ namespace CurrieTechnologies.Blazor.Vibration
         public Task<bool> VibrateAsync(IEnumerable<int> pattern)
         {
             return this.jSRuntime.InvokeAsync<bool>(vibrateFunction, pattern);
+        }
+
+        public Task<bool> BrowserSupportsVibrationAsync()
+        {
+            return this.jSRuntime.InvokeAsync<bool>(supportFunction);
+        }
+
+        public bool BrowserSupportsVibration()
+        {
+            return this.jSInProcessRuntime.Invoke<bool>(supportFunction);
         }
     }
 }

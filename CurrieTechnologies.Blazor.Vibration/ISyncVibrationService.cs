@@ -6,5 +6,6 @@ namespace CurrieTechnologies.Blazor.Vibration
     {
         bool Vibrate(int duration);
         bool Vibrate(IEnumerable<int> pattern);
+        bool BrowserSupportsVibration();
     }
 }

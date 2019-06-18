@@ -5,3 +5,6 @@ window.CurrieTechnologies.Blazor.Vibration = window.CurrieTechnologies.Blazor.Vi
 window.CurrieTechnologies.Blazor.Vibration.Vibrate = function (pattern) {
     return window.navigator.vibrate(pattern);
 };
+window.CurrieTechnologies.Blazor.Vibration.VibrationSupported = function () {
+    return window.navigator.vibrate !== undefined;
+};
