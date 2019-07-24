@@ -1,7 +1,7 @@
 # CurrieTechnologies.Blazor.Vibration
 This package provides Blazor applications with access to the browser's [Vibration API](https://developer.mozilla.org/en-US/docs/Web/API/Vibration_API)
 
-## This package is for Client-side Blazor only. For Server-side Blazor use [CurrieTechnologies.Razor.Vibration](https://github.com/Basaingeal/Razor.Vibration)
+## This package is deprecated. Use [CurrieTechnologies.Razor.Vibration](https://github.com/Basaingeal/Razor.Vibration).
 
 ## Usage
 1) In your Blazor app, add the `CurrieTechnologies.Blazor.Vibration` [NuGet package](https://www.nuget.org/packages/CurrieTechnologies.Blazor.Vibration/)
